@@ -1,0 +1,150 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="keywords" content="植心圃,机械与动力工程学院,心理辅导,帮助,help,健康,Health,快乐,Happy,环境适应,自我管理,情绪调节,人格发展,学习成才,交友恋爱,求职择业"/>
+<meta name="description" content="机械与动力工程学院心理辅导站,设立于2005年12月,于2008年4月正式命名为“植心圃”心理辅导站,取意“种植快乐,共同呵护心灵园地”.辅导站秉承帮助（Help）,健康（Health）,快乐（Happy）——“3H”工作宗旨,积极配合学校心理中心开展学院的心理健康教育工作,以帮助学院学生处理好环境适应,自我管理,情绪调节,人格发展,学习成才,交友恋爱,求职择业等方面的矛盾和困惑为主要任务,树立心理健康意识,提升心理素质.
+" />
+<title>植心圃</title>
+<link href="css/special.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/special.js"></script>
+</head>
+
+<body>
+<div class="may">
+        <div class="may_titlebg">
+            <div class="may_title">5.25活动</div>
+        </div>
+        <div class="may_contentbg"></div>
+        <div class="may_content">
+            <video id="video" controls="controls">
+                <source src="video/movie0.mp4" type="video/mp4" />
+            </video>
+        </div>
+        <div class="control" id="control" >
+             <!--这是视频播放的控制，目前只有一个所以屏蔽掉 -->
+             <!--  
+             	<button id="BUt-1"  onclick="shangyi()">上一个</button>
+                <button onclick="off()" id="off" value="播放">播放</button>
+                <button id="BUt-3"  onclick="xiayi()">下一个</button>
+                <button id="BUt-4"  onclick="jia()">++</button>
+                <button id="BUt-5"  onclick="jian()">--</button>
+               -->
+        </div>
+    </div>
+    <div class="emotional" onmouseover="addemotional()">
+    	<div class="emotional_img">
+            <div>
+                <img class="img-1" src="images/special/emotional1.jpg" width="290" height="300" />
+                <img class="img-2" src="images/special/emotional2.jpg" width="290" height="300" />
+                <img class="img-3" src="images/special/emotional3.jpg" width="290" height="300" />
+            </div>
+		</div>
+        <div class="emotional_con" >
+            <h3 id="addemotional" >情感沙龙</h3>
+            <p>情感沙龙是一种小规模的座谈会，参与同学针对某一话题可以畅所欲言，是增强同学们之间相互了解，交流思想，同时释放压力的一种很好形式，我院“植心圃”心理辅导站每两周定期开展一场情感沙龙，给同学们提供一个释放自我与心交友的平台。</p>
+     	</div>
+    </div>
+    <div class="team" onmouseover="addteam()">
+    	<div class="team_con">
+        	<h3 id="addclass">团体辅导</h3>
+            <p>是一种在团体情境下提供心理帮助与指导的一种咨询形式，即由咨询员根据求询者问题的相似性或求询者自发组成课题小组，通过共同商讨、训练、引导，解决成员共同发展或共有的心理问题。团体咨询既是一种有效的心理治疗，也是一种有效的教育活动。我院团体咨询主要分为新生团体咨询、特殊团体咨询以及预约团体咨询四大板块，针对不同问题制定不同的解决方案以给同学们帮助和指导。
+            </p>
+        </div>
+        <div class="team_img">
+        	<div>
+            	<img src="images/special/team1.jpg" width="290" height="300" />
+                <img src="images/special/team2.jpg" width="290" height="300" />
+                <img src="images/special/team3.jpg" width="290" height="300" />
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+var nextvideo = new Array()
+	nextvideo[0] = "video/movie0.mp4"
+	nextvideo[1] = "video/movie1.mp4"
+	nextvideo[2] = "video/movie2.mp4"
+var Video=document.getElementById("video");
+function off(){
+	var value=document.getElementById("off").value;
+	if(value=="播放"){
+		Video.play();
+		document.getElementById("off").value="暂停";
+		document.getElementById("off").style.backgroundPosition="0px 0px";
+	}
+	else {
+		Video.pause();
+		document.getElementById("off").value="播放";
+		document.getElementById("off").style.backgroundPosition="50px 0px";
+		}
+}
+function jia(){
+	var Volume=Video.volume+0.1;
+	Video.volume=Volume;
+	
+}
+function jian(){
+	var Volume=Video.volume-0.1;
+	Video.volume=Volume;
+	
+}
+function xiayi(){
+	var value=Video.currentSrc;
+	var newvalue= value.substring(value.length-16, value.length);
+	for(var i=0;i<nextvideo.length;i++)
+	{
+		if(nextvideo[i]==newvalue)
+		{
+			var I=i+1;
+			if(I>=nextvideo.length)
+			{
+				Video.src=nextvideo[0];
+				document.getElementById("informasion").innerHTML="视频已最后一个，下一个回到第一个";
+				
+			}
+			else
+			{
+				Video.src=nextvideo[I];
+			}
+		}
+	}
+		
+}
+function shangyi(){
+	var value=Video.currentSrc;
+	var newvalue= value.substring(value.length-16, value.length);
+	for(var i=0;i<nextvideo.length;i++)
+	{
+		var I=i-1;
+		if(I<0)
+		{
+			Video.src=nextvideo[nextvideo.length];
+			document.getElementById("informasion").innerHTML="视频已是第一个，下个视频回到最后一个";
+			
+		}
+		else
+		{
+			Video.src=nextvideo[I];
+		}
+	}
+		
+}
+function jiemubiao(n){
+	switch(n)
+	{
+		case 0:
+			Video.src=nextvideo[0]; break;
+						 
+		case 1:
+			Video.src=nextvideo[1]; break;
+				
+		case 2:
+			Video.src=nextvideo[2]; break;		
+	}
+	
+}
+</script>
+</html>

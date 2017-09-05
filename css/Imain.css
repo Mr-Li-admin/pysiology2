@@ -1,0 +1,212 @@
+@charset "utf-8";
+/* CSS Document */
+*{
+	margin:0px;
+	padding:0px;
+}
+.center{
+	margin:0px auto;
+	width:1000px;
+	height:524px;
+}
+.center .constellation{
+	width:800px;
+	height:524px;
+	float:left;
+	overflow:hidden;
+}
+.center .constellation .div-1{
+	width:396px;
+	height:250px;
+	float:left;
+	border:solid 1px #FFF;
+	perspective:400px;
+	-webkit-perspective:400px;
+	perspective-origin:50% 50%;
+	-webkit-perspective-origin:50% 50%;
+	position:relative;
+	overflow:hidden;
+}
+
+.center .constellation button{
+	width:266px;
+	height:20px;
+	cursor:pointer;
+}
+.center .constellation .div-1 .front{
+	width:400px;
+	height:250px;
+	transform-style:preserve-3d;
+	-webkit-transform-style:preserve-3d;
+	transform-origin:left;
+}
+.center .constellation .div-1:hover .front{
+	animation:Front 1s linear forwards;
+	-webkit-animation:Front 1s linear forwards;	
+}
+@keyframes Front{
+	from	{transform:rotateY(0deg);-webkit-transform:rotateY(0deg);}
+	to		{transform:rotateY(180deg);-webkit-transform:rotateY(180deg);}
+}
+@-webkit-keyframes Front{
+	from	{transform:rotateY(0deg);-webkit-transform:rotateY(0deg);}
+	to		{transform:rotateY(180deg);-webkit-transform:rotateY(180deg);}
+}
+.center .constellation .div-1 .behind
+{
+	position:absolute;
+	top:0px;
+	right:0px;
+	width:380px;
+	height:230px;
+	padding:10px 10px;
+	background:#0CF;
+	color:#FFF;
+	transform-style:preserve-3d;
+	transform-origin:right;
+	transform:rotateY(-120deg);
+	-webkit-transform-style:preserve-3d;
+	-webkit-transform-origin:right;
+	-webkit-transform:rotateY(-120deg);
+}
+.center .constellation .div-1:hover .behind{
+	animation:behind 0.5s 0.5s linear forwards;
+	-webkit-animation:behind 0.5s 0.5s linear forwards;	
+}
+@keyframes behind{
+	from	{transform:rotateY(-120deg);-webkit-transform:rotateY(-120deg);}
+	to		{transform:rotateY(0deg);-webkit-transform:rotateY(0deg);}
+}
+@-webkit-keyframes  behind{
+	from	{transform:rotateY(-120deg);-webkit-transform:rotateY(-120deg);}
+	to		{transform:rotateY(0deg);-webkit-transform:rotateY(0deg);}
+}
+.center .constellation .constellation-1{
+	display:block;
+}
+.center .constellation .constellation-2{
+	display:none;
+}
+.center .constellation .constellation-3{
+	display:none;
+}
+
+.center .test{
+	width:194px;
+	height:520px;
+	float:right;
+	border:solid 2px #FFF;
+	background-image:url(../images/Imain/test-bg.png);
+}
+.center .test-title{
+	width:189px;
+	height:48px;
+	border:solid 2px #F10582;
+	background:url(../images/Imain/test-title.png);
+}
+.center .test ul li{
+	margin-top:2px;
+	margin-bottom:2px;
+	margin-left:25px;
+	height:35px;
+	list-style:disc;
+}
+.center .test ul li a{
+	text-decoration:none;
+	color:#F10582;
+	transition:all.5s;
+}
+.center .test ul li a:hover{
+	font-size:15px;
+}
+.effect-relax{
+	margin:0px auto;
+	margin-top:20px;
+	padding-top:15px;
+	padding-bottom:15px;
+	border:solid 2px #390;
+	width:996px;
+	height:400px;
+}
+.effect-relax .effect{
+	float:left;
+	width:398px;
+	height:400px;
+	border-right:solid 2px #390;
+	position:relative;
+	overflow:hidden;
+}
+.effect-relax .effect .effect-sliding{
+	position:absolute;
+	bottom:0px;
+	left:0px;
+	width:1194px;
+	height:355px;
+	background:#96C;
+	animation:sliding 10s linear infinite alternate;
+	-webkit-animation:sliding 10s linear infinite alternate;
+}
+.effect-relax .effect:hover .effect-sliding{
+	animation-play-state:paused;
+	-webkit-animation-play-state:paused;
+}
+@keyframes sliding{
+	form	{left:0px;}
+	to		{left:-796px;}
+	
+}
+@-webkit-keyframes sliding{
+	form	{left:0px;}
+	to		{left:-796px;}
+	
+}
+.effect-relax .effect .effect-sliding div{
+	text-indent:28px;
+	float:left;
+	border-left:2px solid #FFF;
+	padding:35px;
+	width:324px;
+	height:285px;
+}
+
+.effect-relax .relax{
+	margin-right:3px;
+	float:right;
+	width:596x;
+	height:400px;
+	position:relative;
+	overflow:hidden;
+}
+.effect-relax .relax .relax-sliding{
+	position:absolute;
+	bottom:0px;
+	right:0px;
+	width:2980px;
+	height:355px;
+	background:#96C;
+	animation:relax-sliding 20s linear infinite alternate;
+	-webkit-animation:relax-sliding 20s linear infinite alternate;
+}
+.effect-relax .relax:hover .relax-sliding{
+	animation-play-state:paused;
+	-webkit-animation-play-state:paused;
+}
+@keyframes relax-sliding{
+	form	{right:0px;}
+	to		{right:-2384px;}
+	
+}
+@-webkit-keyframes relax-sliding{
+	form	{right:0px;}
+	to		{right:-2384px;}
+	
+}
+.effect-relax .relax .relax-sliding div{
+	float:right;
+	padding:35px;
+	text-indent:28px;
+	border-left:2px solid #FFF;
+	width:522px;
+	height:285px;
+	color:#FFF;
+}

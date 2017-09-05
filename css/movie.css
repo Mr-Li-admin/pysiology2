@@ -1,0 +1,88 @@
+@charset "utf-8";
+/* 重置样式 */
+*{margin:0;padding:0;}
+ol,ul{list-style:none;}
+*,
+*:after,
+*:before {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+/* movie的样式 */
+.zzsc{
+	margin: 0 auto;
+	text-align: center;
+	overflow: hidden;
+}
+.caroursel{margin:0 auto;}
+/*插件样式*/
+.poster-main{position: relative;width: 900px;height: 270px}
+.poster-main a,.poster-main img{display:block;}
+
+.poster-main p{
+	display:block;
+	position:absolute;
+	left:0px;
+	top:-420px;
+	width:100%;
+	height:100%;
+	z-index:5;
+	background-color:#FFF;
+	transition:all 0.5s;
+	padding-left:25px;
+	padding-right:25px;
+	color:#000;
+	text-align:left;
+	font-weight:bold;
+	font-size:16px;
+	text-indent:32px;
+}
+.poster-main p a{
+	text-decoration:none;
+	color:#0CF;
+	font-size:22px;
+}
+#p1:hover p{
+	top:0px;
+	opacity:0.8;
+	color:#0CF;
+}
+
+#p2:hover p{
+	top:0px;
+	opacity:0.8;
+	color:#0CF;
+}
+
+#p3:hover p{
+	top:0px;
+	opacity:0.8;
+	color:#0CF;
+}
+#p4:hover p{
+	top:0px;
+	opacity:0.8;
+	color:#0CF;
+}
+#p5:hover p{
+	top:0px;
+	opacity:0.8;
+	color:#0CF;
+}
+#p6:hover p{
+	top:0px;
+	opacity:0.8;
+	color:#0CF;
+}
+#p7:hover p{
+	top:0px;
+	opacity:0.8;
+	color:#0CF;
+}
+
+.poster-main .poster-list{width: 900px;height: 270px}
+.poster-main .poster-list .poster-item{position: absolute;left: 0px;top: 0px}
+.poster-main .poster-btn{position: absolute;height: 100%;width:100px;top: 0px;z-index: 10;opacity: 1;}
+.poster-main .poster-prev-btn{left: 0px;background: url("../images/movie/btn_l.png") no-repeat center center; }
+.poster-main .poster-next-btn{right: 0px;background: url("../images/movie/btn_r.png") no-repeat center center;}
